@@ -1,0 +1,102 @@
+﻿field,value,what_it_is
+name_en,,Personal Information - Applicant's name (English)
+name_bn,,Personal Information - Applicant's name (Bangla)
+father_en,,Personal Information - Father's name (English)
+father_bn,,Personal Information - Father's name (Bangla)
+mother_en,,Personal Information - Mother's name (English)
+mother_bn,,Personal Information - Mother's name (Bangla)
+dob,,Personal Information - Date of birth (YYYY-MM-DD)
+nationality,,Personal Information - Nationality
+religion,,Personal Information - Religion
+gender,,Personal Information - Gender
+marital_status,,Personal Information - Marital status
+blood_group,,Personal Information - Blood group
+nid,,Personal Information - National ID number
+birth_reg,,Personal Information - Birth registration number
+passport,,Personal Information - Passport number
+driving_license,,Personal Information - Driving license no
+license_validity,,Personal Information - License validity (YYYY-MM-DD)
+mobile,,Contact - Mobile number
+email,,Contact - Email
+present_care_of,,Present Address - Care of
+present_village,,Present Address - Village / Road / House / Flat (full address)
+present_division,,Present Address - Division
+present_district,,Present Address - District
+present_upazila,,Present Address - Upazila / P.S.
+present_post_office,,Present Address - Post office
+present_post_code,,Present Address - Post code
+permanent_care_of,,Permanent Address - Care of
+permanent_village,,Permanent Address - Village / Road / House / Flat (full address)
+permanent_division,,Permanent Address - Division
+permanent_district,,Permanent Address - District
+permanent_upazila,,Permanent Address - Upazila / P.S.
+permanent_post_office,,Permanent Address - Post office
+permanent_post_code,,Permanent Address - Post code
+same_address,,Permanent Address - Permanent address same as present (yes/no)
+jsc_exam,,JSC / Equivalent - Examination / degree
+jsc_board,,JSC / Equivalent - Board
+jsc_institute,,JSC / Equivalent - Institute / University
+jsc_roll,,JSC / Equivalent - Roll no
+jsc_reg,,JSC / Equivalent - Registration no
+jsc_group,,JSC / Equivalent - Group / subject
+jsc_result_type,,JSC / Equivalent - Result type (e.g. GPA(out of 5))
+jsc_result,,JSC / Equivalent - Result (GPA / marks / status)
+jsc_year,,JSC / Equivalent - Passing year
+ssc_exam,,SSC / Equivalent - Examination / degree
+ssc_board,,SSC / Equivalent - Board
+ssc_institute,,SSC / Equivalent - Institute / University
+ssc_roll,,SSC / Equivalent - Roll no
+ssc_reg,,SSC / Equivalent - Registration no
+ssc_group,,SSC / Equivalent - Group / subject
+ssc_result_type,,SSC / Equivalent - Result type (e.g. GPA(out of 5))
+ssc_result,,SSC / Equivalent - Result (GPA / marks / status)
+ssc_year,,SSC / Equivalent - Passing year
+hsc_exam,,HSC / Equivalent / Diploma - Examination / degree
+hsc_board,,HSC / Equivalent / Diploma - Board
+hsc_institute,,HSC / Equivalent / Diploma - Institute / University
+hsc_roll,,HSC / Equivalent / Diploma - Roll no
+hsc_reg,,HSC / Equivalent / Diploma - Registration no
+hsc_group,,HSC / Equivalent / Diploma - Group / subject
+hsc_result_type,,HSC / Equivalent / Diploma - Result type (e.g. GPA(out of 5))
+hsc_result,,HSC / Equivalent / Diploma - Result (GPA / marks / status)
+hsc_year,,HSC / Equivalent / Diploma - Passing year
+honors_exam,,Graduation / Honors - Examination / degree
+honors_institute,,Graduation / Honors - Institute / University
+honors_subject,,Graduation / Honors - Subject / degree
+honors_roll,,Graduation / Honors - Roll no
+honors_reg,,Graduation / Honors - Registration no
+honors_result_type,,Graduation / Honors - Result type (e.g. GPA(out of 5))
+honors_result,,Graduation / Honors - Result (GPA / marks / status)
+honors_year,,Graduation / Honors - Passing year
+honors_duration,,Graduation / Honors - Course duration
+masters_exam,,Masters / Equivalent - Examination / degree
+masters_institute,,Masters / Equivalent - Institute / University
+masters_subject,,Masters / Equivalent - Subject / degree
+masters_roll,,Masters / Equivalent - Roll no
+masters_reg,,Masters / Equivalent - Registration no
+masters_result_type,,Masters / Equivalent - Result type (e.g. GPA(out of 5))
+masters_result,,Masters / Equivalent - Result (GPA / marks / status)
+masters_year,,Masters / Equivalent - Passing year
+masters_duration,,Masters / Equivalent - Course duration
+quota,,Other - Quota
+departmental_status,,Other - Departmental status
+exp_1_type,,Job Experience 1 - Employed on / type
+exp_1_org,,Job Experience 1 - Organization
+exp_1_business,,Job Experience 1 - Organization business / type
+exp_1_designation,,Job Experience 1 - Designation / post
+exp_1_department,,Job Experience 1 - Department
+exp_1_address,,Job Experience 1 - Organization address / location
+exp_1_from,,Job Experience 1 - From date (YYYY-MM-DD)
+exp_1_to,,Job Experience 1 - To date (YYYY-MM-DD)
+exp_1_current,,Job Experience 1 - Currently working (yes/no)
+exp_1_description,,Job Experience 1 - Job description
+exp_2_type,,Job Experience 2 - Employed on / type
+exp_2_org,,Job Experience 2 - Organization
+exp_2_business,,Job Experience 2 - Organization business / type
+exp_2_designation,,Job Experience 2 - Designation / post
+exp_2_department,,Job Experience 2 - Department
+exp_2_address,,Job Experience 2 - Organization address / location
+exp_2_from,,Job Experience 2 - From date (YYYY-MM-DD)
+exp_2_to,,Job Experience 2 - To date (YYYY-MM-DD)
+exp_2_current,,Job Experience 2 - Currently working (yes/no)
+exp_2_description,,Job Experience 2 - Job description

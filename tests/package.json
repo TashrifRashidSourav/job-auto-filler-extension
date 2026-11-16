@@ -1,0 +1,1 @@
+{"name":"jaf-tests","private":true,"scripts":{"test":"node run.js && node bn.js && node combo.js && node edu.js && node widgets.js && node preview.js && node importtest.js"},"devDependencies":{"jsdom":"^26.0.0"}}

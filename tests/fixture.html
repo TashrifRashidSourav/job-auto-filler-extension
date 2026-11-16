@@ -1,0 +1,104 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Portal fixture</title></head>
+<body>
+<form>
+<div class="bar">Application Form</div>
+<fieldset>
+  <legend>Basic Information</legend>
+  <table>
+    <tr><td><b>Applicant's Name</b></td><td><input type="text" name="a1"></td></tr>
+    <tr><td><b>আবেদনকারীর নাম (বাংলায়)</b></td><td><input type="text" name="a2"></td></tr>
+    <tr><td><b>Father's Name</b></td><td><input type="text" name="a3"></td></tr>
+    <tr><td><b>পিতার নাম (বাংলায়)</b></td><td><input type="text" name="a4"></td></tr>
+    <tr><td><b>Mother's Name</b></td><td><input type="text" name="a5"></td></tr>
+    <tr><td><b>মাতার নাম (বাংলায়)</b></td><td><input type="text" name="a6"></td></tr>
+    <tr><td><b>Date of Birth</b></td><td><input type="date" name="dob"></td></tr>
+    <tr><td><b>Nationality</b></td><td><select name="nat"><option>Select</option><option>Bangladeshi</option><option>Other</option></select></td></tr>
+    <tr><td><b>Religion</b></td><td><select name="rel"><option>Select</option><option>Islam</option><option>Hinduism</option></select></td></tr>
+    <tr><td><b>Gender</b></td><td><select name="gen"><option>Select</option><option>Male</option><option>Female</option></select></td></tr>
+    <tr><td><b>National ID</b></td><td><select name="hasnid"><option>Yes</option><option>No</option></select> <span>[National ID Number]</span> <input type="text" name="nid"></td></tr>
+    <tr><td><b>Birth Registration</b></td><td><select name="hasbr"><option>Yes</option><option>No</option></select> <span>[Birth Registration Number]</span> <input type="text" name="br"></td></tr>
+    <tr><td><b>Passport ID</b></td><td><select name="haspp"><option>Yes</option><option>No</option></select></td></tr>
+    <tr><td><b>Marital Status</b></td><td><select name="ms"><option>Select</option><option>Single</option><option>Married</option></select></td></tr>
+    <tr><td><b>Mobile Number</b></td><td><input type="text" name="m1"></td></tr>
+    <tr><td><b>Confirm Mobile Number</b></td><td><input type="text" name="m2"></td></tr>
+    <tr><td><b>Email</b></td><td><input type="text" name="e1"></td></tr>
+    <tr><td><b>Quota</b></td><td><select name="q"><option>Not Applicable</option><option>Freedom Fighter</option></select></td></tr>
+  </table>
+</fieldset>
+
+<label><input type="checkbox" id="same"> Same as Present Address</label>
+<div style="display:flex">
+  <fieldset id="presfs">
+    <legend>Present Address (বর্তমান ঠিকানা)</legend>
+    <div><label>Care Of</label><input type="text" name="pco"></div>
+    <div><label>Village/ Road/ House/ Flat</label><textarea name="pv"></textarea></div>
+    <div><label>District</label><select name="pd" id="pd"><option>Select</option><option>Kushtia</option><option>Dhaka</option></select></div>
+    <div><label>Upazila/P.S.</label><select name="pu" id="pu"><option>Select</option></select></div>
+    <div><label>Post Office</label><input type="text" name="ppo"></div>
+    <div><label>Post Code</label><input type="text" name="ppc"></div>
+  </fieldset>
+  <fieldset id="permfs">
+    <legend>Permanent Address (স্থায়ী ঠিকানা)</legend>
+    <div><label>Care Of</label><input type="text" name="qco" disabled></div>
+    <div><label>Post Code</label><input type="text" name="qpc" disabled></div>
+  </fieldset>
+</div>
+
+<fieldset>
+  <legend>SSC/Equivalent Level</legend>
+  <div><label>Examination</label><select name="s1"><option>Select</option><option>S.S.C</option><option>Dakhil</option></select></div>
+  <div><label>Board</label><select name="s2"><option>Select</option><option>Dhaka</option><option>Jashore</option></select></div>
+  <div><label>Roll No</label><input type="text" name="s3"></div>
+  <div><label>Result</label><div><select name="s4"><option>Select</option><option>GPA(out of 5)</option><option>GPA(out of 4)</option></select><input type="text" name="s5"></div></div>
+  <div><label>Group/Subject</label><select name="s6"><option>Select</option><option>Science</option><option>Arts</option></select></div>
+  <div><label>Passing Year</label><select name="s7"><option>Select</option><option>2016</option><option>2017</option></select></div>
+</fieldset>
+
+<fieldset>
+  <legend>HSC/Equivalent Level/Diploma-in-Engineering</legend>
+  <div><label>Roll No</label><input type="text" name="h3"></div>
+  <div><label>Passing Year</label><select name="h7"><option>Select</option><option>2019</option></select></div>
+</fieldset>
+
+<fieldset>
+  <legend>Graduation/Equivalent Level</legend>
+  <div><label>Examination</label><select name="g1"><option>Select</option><option>Honors</option></select></div>
+  <div><label>Subject/Degree</label><select name="g2"><option>Select</option><option>Applied Mathematics</option></select></div>
+  <div><label>University/Inst.</label><select name="g3" id="g3"><option>Select</option><option>Dhaka University</option><option>Other</option></select><input type="text" name="g3t"></div>
+  <div><label>Result</label><select name="g4"><option>Select</option><option>Passed</option><option>Awaiting</option></select></div>
+  <div><label>Passing Year</label><select name="g5"><option>Select</option><option>2026</option></select></div>
+  <div><label>Course Duration</label><select name="g6"><option>Select</option><option>04 Years</option></select></div>
+</fieldset>
+
+<div><label><input type="checkbox" id="mapp"> If Applicable</label></div>
+<fieldset disabled id="mfs">
+  <legend>Masters/Equivalent Level</legend>
+  <div><label>Examination</label><select name="m_e"><option>Select</option><option>Masters</option></select></div>
+</fieldset>
+
+<div><label><input type="checkbox" id="eapp"> If Applicable</label></div>
+<fieldset id="efs">
+  <legend>Job Experiences <span id="addmore" role="button">ADD MORE</span></legend>
+  <div class="blk">
+    <div><label>Designation/Post</label><input type="text" name="ed" disabled class="en"></div>
+    <div><label>Organization</label><input type="text" name="eo" disabled class="en"></div>
+    <div><label>Length of Service</label><input type="date" name="ef" disabled class="en"> <span>to</span> <input type="date" name="et" disabled class="en"></div>
+  </div>
+</fieldset>
+</form>
+<script>
+  document.getElementById('pd').addEventListener('change', function () {
+    var u = document.getElementById('pu'); u.innerHTML = '<option>Select</option>';
+    setTimeout(function () { u.innerHTML = '<option>Select</option><option>Daulatpur</option><option>Mirpur</option>'; }, 200);
+  });
+  document.getElementById('same').addEventListener('change', function () { /* fields copy: not needed in test */ });
+  document.getElementById('mapp').addEventListener('change', function (e) { document.getElementById('mfs').disabled = !e.target.checked; });
+  document.getElementById('eapp').addEventListener('change', function (e) { document.querySelectorAll('.en').forEach(function (x) { x.disabled = !e.target.checked; }); });
+  document.getElementById('addmore').addEventListener('click', function () {
+    var b = document.querySelector('.blk').cloneNode(true);
+    b.querySelectorAll('input').forEach(function (i) { i.value = ''; });
+    document.getElementById('efs').appendChild(b);
+  });
+</script>
+</body></html>

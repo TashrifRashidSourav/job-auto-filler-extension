@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Auto Filler – Settings</title>
+<link rel="stylesheet" href="options.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo">✔</div><div><h1>Job Auto Filler</h1><div class="muted">Your details stay in this browser. Nothing is sent anywhere unless you add a Gemini key and use AI features.</div></div></div>
+    <div class="profilebar">
+      <select id="profileSel" aria-label="Profile"></select>
+      <button id="pNew" class="btn">New</button>
+      <button id="pDup" class="btn">Duplicate</button>
+      <button id="pRen" class="btn">Rename</button>
+      <button id="pDel" class="btn danger">Delete</button>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="profile">Profile</button>
+    <button class="tab" data-tab="import">Import</button>
+    <button class="tab" data-tab="export">Export / Backup</button>
+    <button class="tab" data-tab="rules">Site rules</button>
+    <button class="tab" data-tab="settings">Settings &amp; AI</button>
+  </nav>
+
+  <!-- PROFILE -->
+  <section id="tab-profile" class="panel active">
+    <div class="savebar"><span id="saveState" class="muted">All changes saved</span><button id="saveProfile" class="btn pri">Save profile</button></div>
+    <div id="profileForm"></div>
+    <h2>Job experience</h2>
+    <div id="expList"></div>
+    <button id="expAdd" class="btn">+ Add experience</button>
+    <h2>Extra details</h2>
+    <p class="muted">Anything else you often get asked (skills, languages, LinkedIn…). If a form label matches the name here, it will be filled.</p>
+    <div id="extraList"></div>
+    <button id="extraAdd" class="btn">+ Add detail</button>
+  </section>
+
+  <!-- IMPORT -->
+  <section id="tab-import" class="panel">
+    <h2>Import your details</h2>
+    <p class="muted">Upload a file or paste text. CSV and JSON work offline. With a Gemini key you can also import any document (CV as PDF / DOCX / TXT, or a photo/screenshot) and AI will pull out whatever information is there — more or less, it doesn't matter. You always review before saving.</p>
+    <div class="drop" id="drop">
+      <input type="file" id="file" accept=".csv,.json,.txt,.md,.docx,.pdf,.png,.jpg,.jpeg,.webp">
+      <div class="muted">CSV · JSON · TXT · DOCX · PDF · image</div>
+    </div>
+    <textarea id="pasteText" rows="5" placeholder="…or paste text here, e.g. CV content or lines like &quot;Name: ...&quot;"></textarea>
+    <div class="row">
+      <label class="chk"><input type="checkbox" id="useAI"> Use Gemini AI to read it <span class="muted" id="aiHint"></span></label>
+      <button id="analyze" class="btn pri">Analyze</button>
+      <a href="#" id="tplLink">Download CSV template</a>
+    </div>
+    <div id="importMsg" class="notice" hidden></div>
+    <div id="review" hidden>
+      <h3>Review</h3>
+      <p class="muted">Check each row. Change the target field, edit the value, or untick what you don't want.</p>
+      <div class="tablewrap"><table id="reviewTable"><thead><tr><th></th><th>Found in file</th><th>Goes to</th><th>Value</th></tr></thead><tbody></tbody></table></div>
+      <div class="row">
+        <label class="chk"><input type="checkbox" id="ovr" checked> Overwrite values already in the profile</label>
+        <button id="applyImport" class="btn pri">Save to profile</button>
+        <button id="cancelImport" class="btn">Cancel</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPORT -->
+  <section id="tab-export" class="panel">
+    <h2>Export &amp; backup</h2>
+    <div class="row">
+      <button id="expJSON" class="btn">Download profile (JSON)</button>
+      <button id="expCSV" class="btn">Download profile (CSV)</button>
+      <button id="expAll" class="btn">Backup everything (all profiles + site rules)</button>
+    </div>
+    <p class="muted">To restore a backup, use <b>Import</b> and choose the backup JSON file.</p>
+  </section>
+
+  <!-- RULES -->
+  <section id="tab-rules" class="panel">
+    <h2>Site rules</h2>
+    <p class="muted">When you correct a field in the preview, the choice is remembered for that website (and Gemini's guesses are cached too). Delete anything that's wrong.</p>
+    <div id="rulesList"></div>
+    <div class="row">
+      <button id="rulesExport" class="btn">Export rules</button>
+      <button id="rulesImportBtn" class="btn">Import rules</button>
+      <input type="file" id="rulesImport" accept=".json" hidden>
+      <button id="rulesClear" class="btn danger">Delete all rules</button>
+    </div>
+    <p class="muted">Rules are just "this field on this website = that profile field", with no personal data, so you can share them with friends who apply on the same portal.</p>
+  </section>
+
+  <!-- SETTINGS -->
+  <section id="tab-settings" class="panel">
+    <h2>Gemini AI (optional)</h2>
+    <p class="muted">The extension works fully without a key. A key adds: smarter matching for unusual fields, and importing free-form documents. Get a free key at Google AI Studio. The key is stored only in this browser and is used only to call Google's Gemini API. Only field <i>labels</i> are sent for matching. Dropdown picking sends the single value being selected (e.g. an upazila name) together with that dropdown's options. When you import a document with AI, its text is sent to Google.</p>
+    <label class="f"><span>API key</span>
+      <span class="inline"><input type="password" id="apiKey" autocomplete="off" placeholder="AIza…"><button id="showKey" class="btn" type="button">Show</button></span></label>
+    <label class="f"><span>Model</span><input type="text" id="model" placeholder="gemini-2.5-flash"></label>
+    <label class="chk"><input type="checkbox" id="aiMatch"> Use AI to match fields the offline matcher is unsure about</label>
+    <label class="chk"><input type="checkbox" id="aiOptions"> Use AI to pick a dropdown option (e.g. a Bangla upazila) when the built-in English&harr;Bangla dictionary has no match <span class="muted">&mdash; sends that one value plus the option list</span></label>
+    <label class="chk"><input type="checkbox" id="aiDocs"> Use AI by default when importing documents</label>
+    <div class="row">
+      <button id="saveKey" class="btn pri">Save</button>
+      <button id="testKey" class="btn">Test key</button>
+      <button id="removeKey" class="btn danger">Remove key</button>
+    </div>
+    <div id="keyMsg" class="notice" hidden></div>
+    <h2>Filling</h2>
+    <label class="chk"><input type="checkbox" id="watchSteps"> Multi-step forms: after a fill, offer to fill fields that appear on the next step</label>
+    <div class="row"><button id="allSites" class="btn">Allow on all sites &amp; embedded forms (iframes)</button><span class="muted" id="allSitesState"></span></div>
+    <p class="muted">By default the extension only touches the tab you click it on. Some job portals embed their application form from another website (an iframe); allowing all sites lets the extension fill those too. It still only runs when you click it or press the shortcut.</p>
+    <label class="chk"><input type="checkbox" id="overwriteDefault"> Overwrite text fields that already have a value</label>
+    <p class="muted">Keyboard shortcuts: <b>Alt+Shift+F</b> fill, <b>Alt+Shift+P</b> preview. Change them at <code>chrome://extensions/shortcuts</code>.</p>
+  </section>
+</div>
+
+<script src="../data/schema.js"></script>
+<script src="../lib/matcher.js"></script>
+<script src="../lib/profile.js"></script>
+<script src="../lib/importers.js"></script>
+<script src="../lib/gemini.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

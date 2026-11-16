@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Auto Filler</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="logo">✔</div>
+    <div>
+      <h1>Job Auto Filler</h1>
+      <div class="sub" id="aiState">Offline matching</div>
+    </div>
+  </header>
+
+  <label class="lbl" for="profile">Active profile</label>
+  <select id="profile"></select>
+  <div class="meter"><div id="bar"></div></div>
+  <div class="small" id="complete"></div>
+
+  <div id="eduRow" hidden>
+    <label class="lbl" for="edu" style="margin-top:10px">Qualification for "add qualification" forms</label>
+    <select id="edu"></select>
+  </div>
+
+  <button id="fill" class="pri">Fill this form</button>
+  <button id="preview" class="sec">Preview matches, then fill</button>
+
+  <label class="chk"><input type="checkbox" id="overwrite"> Overwrite text fields that already have a value</label>
+
+  <div id="result" class="result" hidden></div>
+
+  <footer>
+    <a href="#" id="settings">Edit profile &amp; settings</a>
+    <span class="small">Alt+Shift+F</span>
+  </footer>
+  <script src="../data/schema.js"></script>
+  <script src="../lib/profile.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
