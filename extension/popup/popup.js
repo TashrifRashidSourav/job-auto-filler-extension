@@ -47,6 +47,7 @@
     await P.store.set({ settings: st.settings });
   });
   $('settings').addEventListener('click', function (e) { e.preventDefault(); chrome.runtime.openOptionsPage(); });
+  $('gear').addEventListener('click', function (e) { e.preventDefault(); chrome.runtime.openOptionsPage(); });
 
   async function go(mode) {
     const tabs = await chrome.tabs.query({ active: true, currentWindow: true });

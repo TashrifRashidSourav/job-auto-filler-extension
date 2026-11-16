@@ -7,35 +7,54 @@
 <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <header>
-    <div class="logo">✔</div>
-    <div>
+  <header class="hero">
+    <img class="logo" src="../icons/logo.svg" alt="" width="42" height="42">
+    <div class="hero-text">
       <h1>Job Auto Filler</h1>
       <div class="sub" id="aiState">Offline matching</div>
     </div>
+    <a href="#" id="gear" class="gear" title="Profile &amp; settings" aria-label="Profile and settings">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+    </a>
   </header>
 
-  <label class="lbl" for="profile">Active profile</label>
-  <select id="profile"></select>
-  <div class="meter"><div id="bar"></div></div>
-  <div class="small" id="complete"></div>
+  <main>
+    <section class="card">
+      <label class="lbl" for="profile">Active profile</label>
+      <select id="profile"></select>
+      <div class="meter"><div id="bar"></div></div>
+      <div class="small" id="complete"></div>
+    </section>
 
-  <div id="eduRow" hidden>
-    <label class="lbl" for="edu" style="margin-top:10px">Qualification for "add qualification" forms</label>
-    <select id="edu"></select>
-  </div>
+    <section class="card" id="eduRow" hidden>
+      <label class="lbl" for="edu">Qualification (for “add qualification” forms)</label>
+      <select id="edu"></select>
+    </section>
 
-  <button id="fill" class="pri">Fill this form</button>
-  <button id="preview" class="sec">Preview matches, then fill</button>
+    <button id="fill" class="pri">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
+      Fill this form
+    </button>
+    <button id="preview" class="sec">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
+      Preview matches first
+    </button>
 
-  <label class="chk"><input type="checkbox" id="overwrite"> Overwrite text fields that already have a value</label>
+    <label class="switch">
+      <input type="checkbox" id="overwrite">
+      <span class="track"><span class="thumb"></span></span>
+      <span class="switch-text">Overwrite text fields that already have a value</span>
+    </label>
 
-  <div id="result" class="result" hidden></div>
+    <div id="result" class="result" hidden></div>
+  </main>
 
   <footer>
     <a href="#" id="settings">Edit profile &amp; settings</a>
-    <span class="small">Alt+Shift+F</span>
+    <span class="kbd" title="Keyboard shortcut">Alt+Shift+F</span>
   </footer>
+  <div class="brand">Powered by <b>Corvas</b></div>
+
   <script src="../data/schema.js"></script>
   <script src="../lib/profile.js"></script>
   <script src="popup.js"></script>

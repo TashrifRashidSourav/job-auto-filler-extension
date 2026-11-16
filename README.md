@@ -1,4 +1,8 @@
-# Job Auto Filler (Chrome / Edge extension)
+<p align="center"><img src="extension/icons/icon512.png" width="110" alt="Job Auto Filler logo"></p>
+
+<h1 align="center">Job Auto Filler</h1>
+<p align="center"><i>Fill job applications in seconds - offline-first, optional Gemini AI, English + Bangla.</i><br><sub>Powered by <b>Corvas</b></sub></p>
+
 
 Fills job-application forms from a profile you save once. Works **fully offline**; a **Gemini API key is optional** and only adds smarter matching and free-form document import.
 

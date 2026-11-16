@@ -6,6 +6,10 @@
 
   let host = null, shadow = null;
 
+  /* Corvas logo (inline so it works on any page without web-accessible resources) */
+  const LOGO_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#43a047"/><stop offset="1" stop-color="#14532d"/></linearGradient></defs><rect width="512" height="512" rx="112" fill="url(#b)"/><path d="M362.07 362.07A150 150 0 1 1 362.07 149.93" fill="none" stroke="#fff" stroke-width="52" stroke-linecap="round"/><path d="M196 262L240 306L318 208" fill="none" stroke="#ffe082" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const LOGO_URI = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(LOGO_SVG);
+
   const CSS = `
   :host{all:initial}
   *{box-sizing:border-box;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Bengali",sans-serif}
@@ -14,8 +18,10 @@
     background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.30);z-index:2147483647;font-size:13px;line-height:1.4;overflow:hidden}
   @media (prefers-color-scheme:dark){.panel{--bg:#1b2027;--bg2:#232a33;--fg:#e8eef4;--mut:#9aa8b6;--line:#333c47;--pri:#43a047;--pri-bg:#20352a;--idle:#7d8a98}}
   button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid transparent;color:inherit;background:none}
-  .hd{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line)}
-  .mark{width:30px;height:30px;border-radius:9px;background:var(--pri);color:#fff;display:grid;place-items:center;font-weight:800;font-size:17px;flex:none}
+  .hd{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--pri-bg),var(--bg))}
+  .mark{width:32px;height:32px;border-radius:9px;flex:none;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+  .by{text-align:center;padding:0 0 9px;font-size:10.5px;color:var(--mut);letter-spacing:.04em;background:var(--bg)}
+  .by b{color:var(--pri);letter-spacing:.07em}
   .ttl{font-weight:700;font-size:14px}
   .sub{color:var(--mut);font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:300px}
   .hd .x{margin-left:auto;font-size:18px;padding:2px 8px;color:var(--mut)}
@@ -299,7 +305,7 @@
     const sub = [meta.host, meta.profile ? 'profile “' + meta.profile + '”' : null].filter(Boolean).join(' · ');
     const panel = h('div', { class: 'panel' }, [
       h('div', { class: 'hd' }, [
-        h('div', { class: 'mark', text: '✓' }),
+        h('img', { class: 'mark', src: LOGO_URI, alt: '' }),
         h('div', {}, [h('div', { class: 'ttl', text: 'Review before filling' }), h('div', { class: 'sub', text: sub, title: sub })]),
         h('button', { class: 'x', text: '✕', title: 'Close (Esc)', onclick: closeFn })
       ]),
@@ -325,7 +331,8 @@
           if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); });
           else { fallbackCopy(text); done(); }
         } }) : null,
-        h('button', { class: 'btn', text: 'Close', onclick: closeFn }), fillBtn])
+        h('button', { class: 'btn', text: 'Close', onclick: closeFn }), fillBtn]),
+      h('div', { class: 'by' }, [document.createTextNode('Powered by '), h('b', { text: 'Corvas' })])
     ]);
     shadow.appendChild(panel);
     rebuild();

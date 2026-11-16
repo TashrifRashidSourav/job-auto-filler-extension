@@ -4,20 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Job Auto Filler – Settings</title>
+<link rel="icon" href="../icons/icon32.png">
 <link rel="stylesheet" href="options.css">
 </head>
 <body>
 <div class="wrap">
-  <header class="top">
-    <div class="brand"><div class="logo">✔</div><div><h1>Job Auto Filler</h1><div class="muted">Your details stay in this browser. Nothing is sent anywhere unless you add a Gemini key and use AI features.</div></div></div>
-    <div class="profilebar">
-      <select id="profileSel" aria-label="Profile"></select>
-      <button id="pNew" class="btn">New</button>
-      <button id="pDup" class="btn">Duplicate</button>
-      <button id="pRen" class="btn">Rename</button>
-      <button id="pDel" class="btn danger">Delete</button>
+  <header class="hero">
+    <img class="logo" src="../icons/logo.svg" alt="" width="56" height="56">
+    <div class="hero-text">
+      <h1>Job Auto Filler</h1>
+      <p>Fill job applications in seconds. Your details stay in this browser, and nothing is sent anywhere unless you add a Gemini key and use the AI features.</p>
     </div>
+    <div class="by">Powered by <b>Corvas</b></div>
   </header>
+
+  <section class="profilebar card">
+    <label for="profileSel">Profile</label>
+    <select id="profileSel" aria-label="Profile"></select>
+    <button id="pNew" class="btn">+ New</button>
+    <button id="pDup" class="btn">Duplicate</button>
+    <button id="pRen" class="btn">Rename</button>
+    <button id="pDel" class="btn danger">Delete</button>
+  </section>
 
   <nav class="tabs" role="tablist">
     <button class="tab active" data-tab="profile">Profile</button>
@@ -115,6 +123,7 @@
     <label class="chk"><input type="checkbox" id="overwriteDefault"> Overwrite text fields that already have a value</label>
     <p class="muted">Keyboard shortcuts: <b>Alt+Shift+F</b> fill, <b>Alt+Shift+P</b> preview. Change them at <code>chrome://extensions/shortcuts</code>.</p>
   </section>
+  <footer class="foot"><img src="../icons/logo.svg" alt="" width="20" height="20"> Job Auto Filler · Powered by <b>Corvas</b></footer>
 </div>
 
 <script src="../data/schema.js"></script>

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Job Auto Filler",
   "version": "1.0.0",
-  "description": "Fill job application forms from your saved profile. Works offline; optional Gemini AI for smarter matching and document import.",
+  "description": "Fill job application forms from your saved profile. Offline-first, optional Gemini AI. Powered by Corvas.",
   "minimum_chrome_version": "105",
   "permissions": ["storage", "activeTab", "scripting"],
   "host_permissions": ["https://generativelanguage.googleapis.com/*"],
