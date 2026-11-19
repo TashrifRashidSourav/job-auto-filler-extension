@@ -1,4 +1,4 @@
-<p align="center"><img src="extension/icons/icon512.png" width="110" alt="Job Auto Filler logo"></p>
+<p align="center"><img src="extension/icons/logo.png" width="110" alt="Job Auto Filler logo"></p>
 
 <h1 align="center">Job Auto Filler</h1>
 <p align="center"><i>Fill job applications in seconds - offline-first, optional Gemini AI, English + Bangla.</i><br><sub>Powered by <b>Corvas</b></sub></p>
