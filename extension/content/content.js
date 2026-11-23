@@ -289,7 +289,7 @@
     if (mode === 'preview') {
       JAF.overlay.show({
         items: items,
-        meta: { host: hostName, profile: profile.name },
+        meta: { host: hostName === 'local' ? '' : hostName, profile: profile.name },
         onOpenSettings: function () { try { chrome.runtime.sendMessage({ type: 'JAF_OPEN_OPTIONS' }); } catch (e) { /* ignore */ } },
         onToggle: function (it) { if (it.include) excluded.delete(it.el); else excluded.add(it.el); },
         onKeyChange: function (it, key) {

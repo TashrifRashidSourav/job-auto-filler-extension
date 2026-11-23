@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Demo – English job form</title><link rel="stylesheet" href="demo.css"></head>
+<body>
+<div class="mk"><img src="../../extension/icons/logo.png" alt=""><div><h1 id="mkTitle">Fill any job application in one click</h1><p id="mkSub">Your saved details go into the right fields.</p></div></div>
+<div class="site"><b>BrightHire Careers</b><span>Software Engineer · Application form (demo data)</span></div>
+<div id="form"></div>
+<script src="stub.js"></script>
+<script src="../../extension/data/schema.js"></script>
+<script src="../../extension/lib/matcher.js"></script>
+<script src="../../extension/data/translate.js"></script>
+<script src="../../extension/lib/profile.js"></script>
+<script src="../../extension/content/scanner.js"></script>
+<script src="../../extension/content/filler.js"></script>
+<script src="../../extension/content/overlay.js"></script>
+<script src="../../extension/content/content.js"></script>
+<script src="demo.js"></script>
+<script>JAFDemo.build({sections:[
+ {fields:[{l:"Applicant's Name"},{l:"Father's Name"},{l:"Mother's Name"},{l:'Date of Birth',t:'date'},{l:'Gender',t:'select',o:['Male','Female','Other']},{l:'Religion',t:'select',o:['Islam','Hinduism','Buddhism','Christianity']},{l:'Nationality',t:'select',o:['Bangladeshi','Other']},{l:'National ID Number'},{l:'Mobile Number'},{l:'Email'}]},
+ {title:'Present Address',fields:[{l:'Care Of'},{l:'District',t:'select',o:['Dhaka','Rajshahi','Khulna','Kushtia','Chuadanga']},{l:'Upazila / P.S.',t:'select',o:['Sadar','Daulatpur','Mirpur','Alamdanga']},{l:'Village / Road / House',t:'textarea',wide:true},{l:'Post Office'},{l:'Post Code'}]},
+ {title:'SSC / Equivalent Level',fields:[{l:'Examination',t:'select',o:['S.S.C','Dakhil']},{l:'Board',t:'select',o:['Dhaka','Rajshahi','Jashore','Chattogram']},{l:'Roll No'},{l:'Group',t:'select',o:['Science','Humanities','Business Studies']},{l:'Result Type',t:'select',o:['GPA(out of 5)','GPA(out of 4)']},{l:'Result'},{l:'Passing Year',t:'select',o:JAFDemo.years(2010,2022)}]},
+ {title:'HSC / Equivalent Level',fields:[{l:'Examination',t:'select',o:['H.S.C','Alim']},{l:'Board',t:'select',o:['Dhaka','Rajshahi','Jashore','Chattogram']},{l:'Roll No'},{l:'Group',t:'select',o:['Science','Humanities','Business Studies']},{l:'Result Type',t:'select',o:['GPA(out of 5)','GPA(out of 4)']},{l:'Result'},{l:'Passing Year',t:'select',o:JAFDemo.years(2012,2024)}]},
+ {title:'Graduation / Equivalent Level',fields:[{l:'Examination',t:'select',o:['Honors','Masters']},{l:'University / Institute'},{l:'Subject / Degree'},{l:'Result Type',t:'select',o:['CGPA(out of 4)','CGPA(out of 5)']},{l:'Result'},{l:'Passing Year',t:'select',o:JAFDemo.years(2016,2026)},{l:'Course Duration',t:'select',o:['3 Years','4 Years','5 Years']}]},
+ {title:'Job Experience',fields:[{l:'Organization'},{l:'Designation'},{l:'Start Date',t:'date'},{l:'End Date',t:'date'},{l:'Job Description',t:'textarea',wide:true}]}
+]});</script>
+</body></html>

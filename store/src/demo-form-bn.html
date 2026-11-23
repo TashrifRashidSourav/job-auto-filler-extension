@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Demo – Bangla job form</title><link rel="stylesheet" href="demo.css"></head>
+<body>
+<div class="mk"><img src="../../extension/icons/logo.png" alt=""><div><h1 id="mkTitle">Fill any job application in one click</h1><p id="mkSub">Your saved details go into the right fields.</p></div></div>
+<div class="site"><b>চাকরির আবেদন পোর্টাল</b><span>আবেদন ফরম (ডেমো তথ্য)</span></div>
+<div id="form"></div>
+<script src="stub.js"></script>
+<script src="../../extension/data/schema.js"></script>
+<script src="../../extension/lib/matcher.js"></script>
+<script src="../../extension/data/translate.js"></script>
+<script src="../../extension/lib/profile.js"></script>
+<script src="../../extension/content/scanner.js"></script>
+<script src="../../extension/content/filler.js"></script>
+<script src="../../extension/content/overlay.js"></script>
+<script src="../../extension/content/content.js"></script>
+<script src="demo.js"></script>
+<script>JAFDemo.build({sections:[
+ {fields:[{l:'নাম (ইংরেজি বড় অক্ষরে)',ph:'নির্বাচন করুন'},{l:'নাম (বাংলায়)'},{l:'পিতার নাম (ইংরেজি)'},{l:'পিতার নাম (বাংলায়)'},{l:'মাতার নাম (ইংরেজি)'},{l:'মাতার নাম (বাংলায়)'},{l:'জন্ম তারিখ',t:'date'},{l:'লিঙ্গ',t:'select',ph:'নির্বাচন করুন',o:['পুরুষ','মহিলা','অন্যান্য']},{l:'ধর্ম',t:'select',ph:'নির্বাচন করুন',o:['ইসলাম','হিন্দু','বৌদ্ধ','খ্রিস্টান']},{l:'বৈবাহিক অবস্থা',t:'select',ph:'নির্বাচন করুন',o:['অবিবাহিত','বিবাহিত']},{l:'জাতীয় পরিচয়পত্র নম্বর'},{l:'মোবাইল নম্বর'},{l:'ইমেইল'}]},
+ {title:'বর্তমান ঠিকানা',fields:[{l:'জেলা',t:'select',ph:'নির্বাচন করুন',o:["ঢাকা","রাজশাহী","খুলনা","কুষ্টিয়া","চুয়াডাঙ্গা","যশোর","চট্টগ্রাম"]},{l:'উপজেলা/থানা',t:'select',ph:'নির্বাচন করুন',o:['কুষ্টিয়া সদর','দৌলতপুর','মিরপুর','খোকসা','কুমারখালী','ভেড়ামারা']},{l:'পোস্ট কোড'},{l:'গ্রাম/বাসা, রাস্তা, ডাকঘর',t:'textarea',wide:true}]},
+ {title:'এসএসসি/সমমান',fields:[{l:'পরীক্ষার নাম',t:'select',ph:'নির্বাচন করুন',o:['এসএসসি','দাখিল']},{l:'বোর্ড',t:'select',ph:'নির্বাচন করুন',o:['ঢাকা','রাজশাহী','যশোর','চট্টগ্রাম']},{l:'রোল নম্বর'},{l:'গ্রুপ',t:'select',ph:'নির্বাচন করুন',o:['বিজ্ঞান','মানবিক','ব্যবসায় শিক্ষা']},{l:'ফলাফলের ধরন',t:'select',ph:'নির্বাচন করুন',o:['জিপিএ (৫ এর মধ্যে)','জিপিএ (৪ এর মধ্যে)']},{l:'ফলাফল'},{l:'পাসের সন',t:'select',ph:'নির্বাচন করুন',o:JAFDemo.years(2010,2022,true)}]}
+]});</script>
+</body></html>

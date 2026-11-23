@@ -26,6 +26,20 @@ Two-column `field,value` (see Import → *Download CSV template*), or a wide fil
 ## Gemini (optional)
 Settings → paste a key from Google AI Studio → Test. Stored only in this browser (`chrome.storage.local`) and used only from the extension's background/settings pages. The model name is configurable (default `gemini-2.5-flash`).
 
+## Publish to Microsoft Edge Add-ons
+Everything needed is prepared: see **[store/EDGE_SUBMISSION.md](store/EDGE_SUBMISSION.md)** for step-by-step instructions and copy-paste text for every field.
+
+| Command | What it does |
+|---|---|
+| `npm install` | one-time, installs the build tools |
+| `npm run validate` | checks the extension against store rules (manifest, icons, no remote code, no inline scripts) |
+| `npm run package` | validates and builds `dist/job-auto-filler-<version>.zip` for upload |
+| `npm run assets` | regenerates the listing images in `store/edge/` (screenshots, tiles, logo) from the real UI |
+| `npm run smoke` | loads the extension in a real Chrome, saves a profile, imports text and fills a page |
+| `npm run release` | all of the above, in order |
+
+Privacy policy: [PRIVACY.md](PRIVACY.md).
+
 ## Tests
 ```
 cd tests && npm install && node run.js && node importtest.js

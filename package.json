@@ -1,0 +1,17 @@
+{
+  "name": "job-auto-filler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Job Auto Filler browser extension - build, test and store-publishing tools. Powered by Corvas.",
+  "scripts": {
+    "test": "npm --prefix tests test",
+    "validate": "node scripts/package-edge.js --check",
+    "package": "node scripts/package-edge.js",
+    "assets": "node scripts/make-store-assets.js",
+    "release": "npm run validate && npm test && npm run smoke && npm run package && npm run assets",
+    "smoke": "node scripts/smoke-test.js"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.0.0"
+  }
+}
