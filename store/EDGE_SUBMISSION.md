@@ -101,7 +101,7 @@ WHY YOU WILL LIKE IT
 PRIVATE BY DESIGN
 • Your details stay in your browser. No account, no servers, no analytics, no ads.
 • Works fully offline.
-• Optional: add your own Google Gemini API key for smarter matching and for reading CVs. Only then are field labels (never your profile values), a single dropdown value, or the document you choose sent to Google - directly from your browser.
+• Optional: add your own Google Gemini API key for smarter matching and for reading CVs. Only then are field labels and the page title (never your profile values), a single dropdown value, or the document you choose sent to Google - directly from your browser.
 • It never submits a form, never ticks declaration or terms boxes and never uploads files. You stay in charge.
 
 HOW TO USE
