@@ -1,4 +1,4 @@
-# Publishing Job Auto Filler on Microsoft Edge Add-ons
+# Publishing Job Application Autofill on Microsoft Edge Add-ons
 
 Everything below is ready to copy and paste. Limits and sizes come from Microsoft's page
 ["Publish a Microsoft Edge extension"](https://learn.microsoft.com/en-us/microsoft-edge/extensions/publish/publish-extension).
@@ -7,7 +7,7 @@ Everything below is ready to copy and paste. Limits and sizes come from Microsof
 
 | What | Where | Notes |
 |---|---|---|
-| **Package to upload** | `dist/job-auto-filler-1.0.0.zip` | Rebuild any time with `npm run package` |
+| **Package to upload** | `dist/job-application-autofill-1.0.0.zip` | Rebuild any time with `npm run package` |
 | **Extension logo** (required) | `store/edge/store-logo-300x300.png` | 300x300, transparent PNG (Microsoft: 300x300 recommended, 128x128 minimum) |
 | **Screenshots** (up to 6) | `store/edge/screenshots/01…06-*.png` | All exactly 1280x800 |
 | **Small promotional tile** (optional) | `store/edge/promo-small-440x280.png` | 440x280 |
@@ -28,8 +28,8 @@ Regenerate all images from the real UI with `npm run assets` (needs `npm install
 ## 2. Create the submission
 
 1. Dashboard → **Create new extension**.
-2. **Upload package** → choose `dist/job-auto-filler-1.0.0.zip`. The name and short description are read from the manifest
-   (`Job Auto Filler` / *Fill job application forms from your saved profile. Offline-first, optional Gemini AI. Powered by Corvas.*).
+2. **Upload package** → choose `dist/job-application-autofill-1.0.0.zip`. The name and short description are read from the manifest
+   (`Job Application Autofill` / *Fill job application forms from your saved profile. Offline-first, optional Gemini AI. Powered by Corvas.*).
 
 ## 3. Availability and Properties
 
@@ -52,7 +52,7 @@ https://github.com/TashrifRashidSourav/job-auto-filler-extension/blob/main/PRIVA
 
 **Single purpose description** (paste):
 
-> Job Auto Filler has one purpose: to fill job application forms on the page the user is viewing with details the user has saved themselves in the extension, only when the user asks.
+> Job Application Autofill has one purpose: to fill job application forms on the page the user is viewing with details the user has saved themselves in the extension, only when the user asks.
 
 **Permission justifications** (paste one per permission):
 
@@ -76,17 +76,17 @@ https://github.com/TashrifRashidSourav/job-auto-filler-extension/blob/main/PRIVA
 
 ## 5. Store listing (English)
 
-**Extension name** (from manifest): `Job Auto Filler`
+**Extension name** (from manifest, 43 characters): `Job Application Autofill – English & Bangla`
 
-**Short description** (from manifest, 105 characters):
-`Fill job application forms from your saved profile. Offline-first, optional Gemini AI. Powered by Corvas.`
+**Short description** (from manifest, 120 characters):
+`Autofill job application forms in one click: resume, CV, education and experience. Private, offline, English and Bangla.`
 
-**Description** (limit 250–10,000 characters; this is ~2,300):
+**Description** (limit 250–10,000 characters; this is ~2,400):
 
 ```
-Job Auto Filler fills job application forms for you - in one click.
+Autofill job applications in one click. Save your resume / CV details once (name, parents' names, date of birth, ID numbers, contact information, addresses, education and work experience) and this job form filler recognises the fields on any job application form and fills them in for you.
 
-Save your details once (name, parents' names, date of birth, ID numbers, contact information, addresses, education and work experience) and let the extension recognise the fields on any job form and fill them in. It is built for the long, repetitive forms that government and company job portals ask you to complete again and again - including Bangladeshi portals with Bangla and English forms.
+It is built for the long, repetitive forms that government job portals and company career pages ask you to complete again and again - and it is one of the few autofill tools that works with both English and Bangla forms, including Bangladeshi government job application websites.
 
 WHY YOU WILL LIKE IT
 • One click: press "Fill this form" or Alt+Shift+F.
@@ -115,16 +115,16 @@ Not affiliated with Google, Microsoft or any job portal. "Gemini" is a trademark
 Powered by Corvas.
 ```
 
-**Search terms** (max 7 terms, 30 characters each, 21 words total - these 7 use 19 words):
+**Search terms** (max 7 terms, 30 characters each, 21 words total - these 7 use 20 words):
 
 ```
 job application autofill
-resume form filler
+autofill job applications
+resume autofill
 cv autofill
 job form filler
-apply for jobs
-bangla job
-bd job application
+govt job apply bangladesh
+bangla form filler
 ```
 
 **Extension logo:** upload `store/edge/store-logo-300x300.png`

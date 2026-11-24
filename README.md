@@ -1,6 +1,6 @@
-<p align="center"><img src="extension/icons/logo.png" width="110" alt="Job Auto Filler logo"></p>
+<p align="center"><img src="extension/icons/logo.png" width="110" alt="Job Application Autofill logo"></p>
 
-<h1 align="center">Job Auto Filler</h1>
+<h1 align="center">Job Application Autofill</h1>
 <p align="center"><i>Fill job applications in seconds - offline-first, optional Gemini AI, English + Bangla.</i><br><sub>Powered by <b>Corvas</b></sub></p>
 
 
@@ -33,7 +33,7 @@ Everything needed is prepared: see **[store/EDGE_SUBMISSION.md](store/EDGE_SUBMI
 |---|---|
 | `npm install` | one-time, installs the build tools |
 | `npm run validate` | checks the extension against store rules (manifest, icons, no remote code, no inline scripts) |
-| `npm run package` | validates and builds `dist/job-auto-filler-<version>.zip` for upload |
+| `npm run package` | validates and builds `dist/job-application-autofill-<version>.zip` for upload |
 | `npm run assets` | regenerates the listing images in `store/edge/` (screenshots, tiles, logo) from the real UI |
 | `npm run smoke` | loads the extension in a real Chrome, saves a profile, imports text and fills a page |
 | `npm run release` | all of the above, in order |

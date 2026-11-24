@@ -1,8 +1,8 @@
 {
-  "name": "job-auto-filler",
+  "name": "job-application-autofill",
   "version": "1.0.0",
   "private": true,
-  "description": "Job Auto Filler browser extension - build, test and store-publishing tools. Powered by Corvas.",
+  "description": "Job Application Autofill browser extension - build, test and store-publishing tools. Powered by Corvas.",
   "scripts": {
     "test": "npm --prefix tests test",
     "validate": "node scripts/package-edge.js --check",

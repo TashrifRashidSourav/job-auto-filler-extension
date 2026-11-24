@@ -1,17 +1,25 @@
 {
   "manifest_version": 3,
-  "name": "Job Auto Filler",
+  "name": "Job Application Autofill – English & Bangla",
   "version": "1.0.0",
-  "description": "Fill job application forms from your saved profile. Offline-first, optional Gemini AI. Powered by Corvas.",
+  "description": "Autofill job application forms in one click: resume, CV, education and experience. Private, offline, English and Bangla.",
   "minimum_chrome_version": "105",
-  "permissions": ["storage", "activeTab", "scripting"],
-  "host_permissions": ["https://generativelanguage.googleapis.com/*"],
-  "optional_host_permissions": ["<all_urls>"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "optional_host_permissions": [
+    "<all_urls>"
+  ],
   "background": {
     "service_worker": "background/service-worker.js"
   },
   "action": {
-    "default_title": "Job Auto Filler",
+    "default_title": "Job Application Autofill",
     "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
@@ -25,11 +33,15 @@
   },
   "commands": {
     "fill-form": {
-      "suggested_key": { "default": "Alt+Shift+F" },
+      "suggested_key": {
+        "default": "Alt+Shift+F"
+      },
       "description": "Fill the current page's form with the active profile"
     },
     "preview-form": {
-      "suggested_key": { "default": "Alt+Shift+P" },
+      "suggested_key": {
+        "default": "Alt+Shift+P"
+      },
       "description": "Preview matches, then fill"
     }
   },

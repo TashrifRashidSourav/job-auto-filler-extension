@@ -1,10 +1,10 @@
-# Privacy Policy – Job Auto Filler
+# Privacy Policy – Job Application Autofill
 
 **Effective date:** 23 November 2026  
 **Developer:** Corvas  
 **Contact:** https://github.com/TashrifRashidSourav/job-auto-filler-extension/issues
 
-Job Auto Filler is a browser extension that fills job application forms using details you save yourself. This policy explains exactly what it stores, what it sends, and what it never does.
+Job Application Autofill is a browser extension that fills job application forms using details you save yourself. This policy explains exactly what it stores, what it sends, and what it never does.
 
 ## The short version
 
@@ -70,7 +70,7 @@ The extension is a general-purpose tool and is not directed at children under 13
 
 ## Not affiliated
 
-Job Auto Filler is an independent project. It is not affiliated with, endorsed by or sponsored by Google, Microsoft or any job portal. "Gemini" is a trademark of Google LLC.
+Job Application Autofill is an independent project. It is not affiliated with, endorsed by or sponsored by Google, Microsoft or any job portal. "Gemini" is a trademark of Google LLC.
 
 ## Changes to this policy
 

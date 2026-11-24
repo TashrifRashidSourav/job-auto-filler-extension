@@ -278,7 +278,7 @@
   $('expJSON').addEventListener('click', function () { download('job-profile.json', JSON.stringify({ name: profile().name, data: data() }, null, 2), 'application/json'); });
   $('expCSV').addEventListener('click', function () { download('job-profile.csv', '﻿' + I.toCSV([['field', 'value']].concat(P.toRows(data()))), 'text/csv'); });
   $('expAll').addEventListener('click', function () {
-    download('job-auto-filler-backup.json', JSON.stringify({ profiles: st.profiles, activeProfileId: st.activeProfileId, siteRules: st.siteRules }, null, 2), 'application/json');
+    download('job-application-autofill-backup.json', JSON.stringify({ profiles: st.profiles, activeProfileId: st.activeProfileId, siteRules: st.siteRules }, null, 2), 'application/json');
   });
 
   /* ---------------- rules ---------------- */
@@ -342,7 +342,7 @@
   /* site rules: export / import */
   $('rulesExport').addEventListener('click', async function () {
     const rules = (await P.store.get('siteRules')).siteRules || {};
-    download('job-auto-filler-rules.json', JSON.stringify(rules, null, 2), 'application/json');
+    download('job-application-autofill-rules.json', JSON.stringify(rules, null, 2), 'application/json');
   });
   $('rulesImportBtn').addEventListener('click', function () { $('rulesImport').click(); });
   $('rulesImport').addEventListener('change', async function (e) {

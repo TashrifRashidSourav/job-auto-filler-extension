@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* Validates the extension and builds the .zip you upload to Microsoft Edge Add-ons (Partner Center).
- *   node scripts/package-edge.js            -> validate + dist/job-auto-filler-<version>.zip
+ *   node scripts/package-edge.js            -> validate + dist/job-application-autofill-<version>.zip
  *   node scripts/package-edge.js --check    -> validate only
  * No dependencies. Entries are written with forward slashes, as the stores require. */
 'use strict';
@@ -134,7 +134,7 @@ console.log('Validation : OK');
 if (process.argv.includes('--check')) process.exit(0);
 
 fs.mkdirSync(DIST, { recursive: true });
-const name = 'job-auto-filler-' + res.manifest.version + '.zip';
+const name = 'job-application-autofill-' + res.manifest.version + '.zip';
 const out = path.join(DIST, name);
 const entries = res.files.sort().map((f) => ({ name: f, data: fs.readFileSync(path.join(EXT, f)) }));
 const zip = makeZip(entries);
